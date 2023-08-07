@@ -10,7 +10,7 @@
 			"item": [
 				{
 					"name": "IndentApi/IndentAdminSubmit",
-					"_postman_id": "5abd0811-54da-41eb-b423-05815ac6e399",
+					"id": "5abd0811-54da-41eb-b423-05815ac6e399",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -37,7 +37,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "4d513b98-decc-48ef-96ad-8120625c31cc"
+			"id": "4d513b98-decc-48ef-96ad-8120625c31cc"
 		},
 		{
 			"name": "Dairy_Customer_API",
@@ -56,7 +56,7 @@
 							}
 						}
 					],
-					"_postman_id": "7d56a005-a37e-420c-a373-8cd7a6ab9f24",
+					"id": "7d56a005-a37e-420c-a373-8cd7a6ab9f24",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -103,10 +103,7 @@
 									"value": "1111",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "http://localhost:8888/register"
 					},
@@ -114,7 +111,7 @@
 				},
 				{
 					"name": "IndentApi/GetCustomerHistory",
-					"_postman_id": "b4a5aa3e-a941-469c-885e-3a6ffa4a22f1",
+					"id": "b4a5aa3e-a941-469c-885e-3a6ffa4a22f1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -143,13 +140,13 @@
 								}
 							}
 						},
-						"url": "http://qwikflow.in/DairyAPI/IndentApi/GetCustomerHistory"
+						"url": "http://localhost:8888/IndentApi/GetCustomerHistory"
 					},
 					"response": []
 				},
 				{
 					"name": "CustomerApi/ConfirmOTP",
-					"_postman_id": "355b5d25-bf3e-4f3b-8aa6-f1a074ed6e6c",
+					"id": "355b5d25-bf3e-4f3b-8aa6-f1a074ed6e6c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -175,10 +172,7 @@
 									"value": "1111",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "http://localhost:8888/CustomerApi/ConfirmOTP"
 					},
@@ -186,7 +180,7 @@
 				},
 				{
 					"name": "CustomerApi/CheckFlag",
-					"_postman_id": "018cad5d-6755-4b65-bc7d-b35a58515c97",
+					"id": "018cad5d-6755-4b65-bc7d-b35a58515c97",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -208,10 +202,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {}
-							}
+							"raw": ""
 						},
 						"url": "http://localhost:8888/CustomerApi/CheckFlag"
 					},
@@ -219,7 +210,7 @@
 				},
 				{
 					"name": "CustomerApi/PasswordChange",
-					"_postman_id": "86e01bcb-aa3a-41dc-97d9-60cdec3b740b",
+					"id": "86e01bcb-aa3a-41dc-97d9-60cdec3b740b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -246,10 +237,7 @@
 									"type": "text",
 									"disabled": true
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "http://localhost:8888/CustomerApi/PasswordChange"
 					},
@@ -257,7 +245,7 @@
 				},
 				{
 					"name": "CustomerApi/GetCustomerDetails",
-					"_postman_id": "892aeb91-ab96-4131-b4e8-d0ce702861eb",
+					"id": "892aeb91-ab96-4131-b4e8-d0ce702861eb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -278,10 +266,7 @@
 									"value": "919629240197",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "http://qwikflow.in/DairyAPI/CustomerApi/GetCustomerDetails"
 					},
@@ -289,7 +274,7 @@
 				},
 				{
 					"name": "ItemApi/ItemList",
-					"_postman_id": "cccd18e6-2abe-46ac-b5f0-4ac23bfc4c4b",
+					"id": "cccd18e6-2abe-46ac-b5f0-4ac23bfc4c4b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -315,10 +300,7 @@
 									"value": "1111",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "http://localhost:8888/ItemApi/ItemList"
 					},
@@ -326,7 +308,7 @@
 				},
 				{
 					"name": "login",
-					"_postman_id": "69231046-a678-4366-b1ed-3e1cc3b0d809",
+					"id": "69231046-a678-4366-b1ed-3e1cc3b0d809",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -357,10 +339,7 @@
 									"value": "1111",
 									"type": "text"
 								}
-							],
-							"options": {
-								"urlencoded": {}
-							}
+							]
 						},
 						"url": "http://localhost:8888/login"
 					},
@@ -368,7 +347,7 @@
 				},
 				{
 					"name": "ItemApi/ItemAllList",
-					"_postman_id": "011b6a71-fb40-440f-852b-1272119a1cdd",
+					"id": "011b6a71-fb40-440f-852b-1272119a1cdd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -383,10 +362,7 @@
 						"header": [],
 						"body": {
 							"mode": "urlencoded",
-							"urlencoded": [],
-							"options": {
-								"urlencoded": {}
-							}
+							"urlencoded": []
 						},
 						"url": "http://localhost:8888/ItemApi/ItemAllList"
 					},
@@ -394,7 +370,7 @@
 				},
 				{
 					"name": "IndentApi/AllIndentSubmit",
-					"_postman_id": "280e8301-f379-41ba-8838-2295fa9bacca",
+					"id": "280e8301-f379-41ba-8838-2295fa9bacca",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -422,7 +398,7 @@
 				},
 				{
 					"name": "IndentApi/IndentCartSubmit",
-					"_postman_id": "1e22639c-6964-4d39-b4d6-381461e1fe4e",
+					"id": "1e22639c-6964-4d39-b4d6-381461e1fe4e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -450,7 +426,7 @@
 				},
 				{
 					"name": "IndentApi/IndentStatusupdate",
-					"_postman_id": "dd771f77-736f-440b-9de5-fbb3064211d4",
+					"id": "dd771f77-736f-440b-9de5-fbb3064211d4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -477,7 +453,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "4d70f27b-7b8d-4c40-a257-af33ea8582aa"
+			"id": "4d70f27b-7b8d-4c40-a257-af33ea8582aa"
 		}
 	]
 }

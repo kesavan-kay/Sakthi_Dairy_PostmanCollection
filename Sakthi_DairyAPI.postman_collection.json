@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "b184c027-9e7e-4e6b-9e55-2233530e3935",
+		"name": "Sakthi_Dairy_CustomerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11150920",
+		"_collection_link": "https://solar-spaceship-931018.postman.co/workspace/Team-Workspace~4953a60d-6289-4c44-8466-0a6d178c1314/collection/11150920-b184c027-9e7e-4e6b-9e55-2233530e3935?action=share&creator=11150920&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Dairy_Admin_API",
+			"item": [
+				{
+					"name": "IndentApi/IndentAdminSubmit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"phone_number\":\"919629240197\",\r\n  \"item_list\":[\r\n      {\r\n          \"item_id\": \"10004\",\r\n          \"item_name\": \"Super 475ML\",\r\n          \"base_uom\": \"LTR\",\r\n          \"req_qty\":1,\r\n          \"packing_uom_conversion\": 12.35\r\n      }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/IndentApi/IndentAdminSubmit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"IndentApi",
+								"IndentAdminSubmit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dairy_Customer_API",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "919629240197",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "1111",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "grant_type",
+								"value": "\"password\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8888/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/GetCustomerHistory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "dGISwgx9G-07-mtRNZcBNV4ZPo-InrzEUHejFmioAFakFOOR3PadhOI97091rs_NqlTAw2wNDwhnJ5hbTB7Py2UL26bwtLN_BjjK2B28SdEFzfkOqwShu5S90CC1AEF86VZmgjDXDPooVwZy4K_S0ew34mxnALfG4U2ad2xSXyFgFaGhgm9zNIITzxqdqbzECyO1sTgi0Z3CfCv9Rm7DK2vIGGjlHwmrKPczny8RB3W8LtL-c-7huUmjhQb9esHf",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "phoneNumber",
+								"value": "919629240197",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\":\"919629240197\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/IndentApi/GetCustomerHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"IndentApi",
+								"GetCustomerHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/ConfirmOTP",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "PIN",
+									"value": "1111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8888/CustomerApi/ConfirmOTP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"CustomerApi",
+								"ConfirmOTP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/CheckFlag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "phoneNumber",
+								"value": "919629240197",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8888/CustomerApi/CheckFlag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"CustomerApi",
+								"CheckFlag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/PasswordChange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "PIN",
+									"value": "1111",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8888/CustomerApi/PasswordChange",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"CustomerApi",
+								"PasswordChange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/GetCustomerDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "dGISwgx9G-07-mtRNZcBNV4ZPo-InrzEUHejFmioAFakFOOR3PadhOI97091rs_NqlTAw2wNDwhnJ5hbTB7Py2UL26bwtLN_BjjK2B28SdEFzfkOqwShu5S90CC1AEF86VZmgjDXDPooVwZy4K_S0ew34mxnALfG4U2ad2xSXyFgFaGhgm9zNIITzxqdqbzECyO1sTgi0Z3CfCv9Rm7DK2vIGGjlHwmrKPczny8RB3W8LtL-c-7huUmjhQb9esHf",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8888/CustomerApi/GetCustomerDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"CustomerApi",
+								"GetCustomerDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemApi/ItemList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "PIN",
+									"value": "1111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8888/ItemApi/ItemList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"ItemApi",
+								"ItemList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8888/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemApi/ItemAllList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8888/ItemApi/ItemAllList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"ItemApi",
+								"ItemAllList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/AllIndentSubmit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"phone_number\":\"919629240197\",\r\n  \"item_list\":[\r\n      {\r\n          \"item_id\": \"10004\",\r\n          \"item_name\": \"Super 475ML\",\r\n          \"base_uom\": \"LTR\",\r\n          \"req_qty\":1,\r\n          \"packing_uom_conversion\": 12.35\r\n      }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/IndentApi/AllIndentSubmit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"IndentApi",
+								"AllIndentSubmit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/IndentCartSubmit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "dGISwgx9G-07-mtRNZcBNV4ZPo-InrzEUHejFmioAFakFOOR3PadhOI97091rs_NqlTAw2wNDwhnJ5hbTB7Py2UL26bwtLN_BjjK2B28SdEFzfkOqwShu5S90CC1AEF86VZmgjDXDPooVwZy4K_S0ew34mxnALfG4U2ad2xSXyFgFaGhgm9zNIITzxqdqbzECyO1sTgi0Z3CfCv9Rm7DK2vIGGjlHwmrKPczny8RB3W8LtL-c-7huUmjhQb9esHf",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"phone_number\":\"919629240197\",\r\n  \"category_list\":[\r\n      {\r\n      \"item_list\":[\r\n      {\r\n          \"item_id\": \"10004\",\r\n          \"item_name\": \"Super 475ML\",\r\n          \"base_uom\": \"LTR\",\r\n          \"req_qty\":1,\r\n          \"packing_uom_conversion\": 12.35\r\n      }\r\n      ]\r\n}\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://qwikflow.in/DairyAPI/IndentApi/IndentCartSubmit",
+							"protocol": "http",
+							"host": [
+								"qwikflow",
+								"in"
+							],
+							"path": [
+								"DairyAPI",
+								"IndentApi",
+								"IndentCartSubmit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/IndentStatusupdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indent_ID\": \"MI169038691969132\",\r\n    \"indent_status\": \"Cancelled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/IndentApi/IndentStatusupdate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"IndentApi",
+								"IndentStatusupdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

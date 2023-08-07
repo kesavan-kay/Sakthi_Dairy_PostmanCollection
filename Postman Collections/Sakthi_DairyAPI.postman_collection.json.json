@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "b184c027-9e7e-4e6b-9e55-2233530e3935",
+		"name": "Sakthi_DairyAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dairy_Admin_API",
+			"item": [
+				{
+					"name": "IndentApi/IndentAdminSubmit",
+					"_postman_id": "5abd0811-54da-41eb-b423-05815ac6e399",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"phone_number\":\"919629240197\",\r\n  \"item_list\":[\r\n      {\r\n          \"item_id\": \"10004\",\r\n          \"item_name\": \"Super 475ML\",\r\n          \"base_uom\": \"LTR\",\r\n          \"req_qty\":1,\r\n          \"packing_uom_conversion\": 12.35\r\n      }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/IndentApi/IndentAdminSubmit"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "4d513b98-decc-48ef-96ad-8120625c31cc"
+		},
+		{
+			"name": "Dairy_Customer_API",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9a75762c-5c06-4a0d-a3e3-24aca967c768",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "7d56a005-a37e-420c-a373-8cd7a6ab9f24",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "919629240197",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "1111",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "grant_type",
+								"value": "\"password\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1111",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://localhost:8888/register"
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/GetCustomerHistory",
+					"_postman_id": "b4a5aa3e-a941-469c-885e-3a6ffa4a22f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "dGISwgx9G-07-mtRNZcBNV4ZPo-InrzEUHejFmioAFakFOOR3PadhOI97091rs_NqlTAw2wNDwhnJ5hbTB7Py2UL26bwtLN_BjjK2B28SdEFzfkOqwShu5S90CC1AEF86VZmgjDXDPooVwZy4K_S0ew34mxnALfG4U2ad2xSXyFgFaGhgm9zNIITzxqdqbzECyO1sTgi0Z3CfCv9Rm7DK2vIGGjlHwmrKPczny8RB3W8LtL-c-7huUmjhQb9esHf"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "phoneNumber",
+								"value": "919629240197",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phoneNumber\":\"919629240197\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://qwikflow.in/DairyAPI/IndentApi/GetCustomerHistory"
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/ConfirmOTP",
+					"_postman_id": "355b5d25-bf3e-4f3b-8aa6-f1a074ed6e6c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "PIN",
+									"value": "1111",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://localhost:8888/CustomerApi/ConfirmOTP"
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/CheckFlag",
+					"_postman_id": "018cad5d-6755-4b65-bc7d-b35a58515c97",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "phoneNumber",
+								"value": "919629240197",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "http://localhost:8888/CustomerApi/CheckFlag"
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/PasswordChange",
+					"_postman_id": "86e01bcb-aa3a-41dc-97d9-60cdec3b740b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "PIN",
+									"value": "1111",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://localhost:8888/CustomerApi/PasswordChange"
+					},
+					"response": []
+				},
+				{
+					"name": "CustomerApi/GetCustomerDetails",
+					"_postman_id": "892aeb91-ab96-4131-b4e8-d0ce702861eb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "dGISwgx9G-07-mtRNZcBNV4ZPo-InrzEUHejFmioAFakFOOR3PadhOI97091rs_NqlTAw2wNDwhnJ5hbTB7Py2UL26bwtLN_BjjK2B28SdEFzfkOqwShu5S90CC1AEF86VZmgjDXDPooVwZy4K_S0ew34mxnALfG4U2ad2xSXyFgFaGhgm9zNIITzxqdqbzECyO1sTgi0Z3CfCv9Rm7DK2vIGGjlHwmrKPczny8RB3W8LtL-c-7huUmjhQb9esHf"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://qwikflow.in/DairyAPI/CustomerApi/GetCustomerDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "ItemApi/ItemList",
+					"_postman_id": "cccd18e6-2abe-46ac-b5f0-4ac23bfc4c4b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phoneNumber",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "PIN",
+									"value": "1111",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://localhost:8888/ItemApi/ItemList"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"_postman_id": "69231046-a678-4366-b1ed-3e1cc3b0d809",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "6tR6gHhd1kwRywlh3RMWQLi5_LWel1_tEjtnS7IpiAQeE9IaL9OnZ5LE22jgczSHAn4R9q2OKqR2QVHimwATDc_f0mKWrwMCkJGLnnJPxpLEfLa4HcojIk4-ZzYl_CO-VXA_0zboTzNOk-BGHwc3C0cILYby8nkMvMIYQeF8rWMkHUlGOjSI_Y1k9t4dozE-arfGAzIaMXGf_KCzdmtbnFlCMvbeWgM_-d8ajjmo3jgLwD6JWrukF9ZQcI8JPwyQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "919629240197",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1111",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://localhost:8888/login"
+					},
+					"response": []
+				},
+				{
+					"name": "ItemApi/ItemAllList",
+					"_postman_id": "011b6a71-fb40-440f-852b-1272119a1cdd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": "http://localhost:8888/ItemApi/ItemAllList"
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/AllIndentSubmit",
+					"_postman_id": "280e8301-f379-41ba-8838-2295fa9bacca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"phone_number\":\"919629240197\",\r\n  \"item_list\":[\r\n      {\r\n          \"item_id\": \"10004\",\r\n          \"item_name\": \"Super 475ML\",\r\n          \"base_uom\": \"LTR\",\r\n          \"req_qty\":1,\r\n          \"packing_uom_conversion\": 12.35\r\n      }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/IndentApi/AllIndentSubmit"
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/IndentCartSubmit",
+					"_postman_id": "1e22639c-6964-4d39-b4d6-381461e1fe4e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "dGISwgx9G-07-mtRNZcBNV4ZPo-InrzEUHejFmioAFakFOOR3PadhOI97091rs_NqlTAw2wNDwhnJ5hbTB7Py2UL26bwtLN_BjjK2B28SdEFzfkOqwShu5S90CC1AEF86VZmgjDXDPooVwZy4K_S0ew34mxnALfG4U2ad2xSXyFgFaGhgm9zNIITzxqdqbzECyO1sTgi0Z3CfCv9Rm7DK2vIGGjlHwmrKPczny8RB3W8LtL-c-7huUmjhQb9esHf"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"phone_number\":\"919629240197\",\r\n  \"category_list\":[\r\n      {\r\n      \"item_list\":[\r\n      {\r\n          \"item_id\": \"10004\",\r\n          \"item_name\": \"Super 475ML\",\r\n          \"base_uom\": \"LTR\",\r\n          \"req_qty\":1,\r\n          \"packing_uom_conversion\": 12.35\r\n      }\r\n      ]\r\n}\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://qwikflow.in/DairyAPI/IndentApi/IndentCartSubmit"
+					},
+					"response": []
+				},
+				{
+					"name": "IndentApi/IndentStatusupdate",
+					"_postman_id": "dd771f77-736f-440b-9de5-fbb3064211d4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "TXwrXZOCCT860mlsmOE74LF_TId6yW_0qqBhfphw3FZMjw19WlEl-o3YUxzU6S8NMDAOv2rsRdHjwejHQv_Kk5f6kWoo6ptoF-AasVjcpnEfcD-JmcaMsuVPOQRzSg-pET70wgfvQ96x96lwYXb3khtCf_l2JCIgZfUqknq4VcxfJe12LsmH-imlOPBleTbf4GEC0Xs_K-27nAf2WT-5rm0uSn7OQJ0uQDdICbXLOuo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indent_ID\": \"MI169038691969132\",\r\n    \"indent_status\": \"Cancelled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8888/IndentApi/IndentStatusupdate"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "4d70f27b-7b8d-4c40-a257-af33ea8582aa"
+		}
+	]
+}
